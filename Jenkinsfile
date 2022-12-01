@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat "dotnet sonarscanner --v"
+                bat "dir"
             }
         }
         stage('Deploy') {
