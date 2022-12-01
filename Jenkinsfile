@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                bat 'dotnet sonarscanner --v'
             }
         }
         stage('Deploy') {
