@@ -1,0 +1,36 @@
+package TestAPI;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
+
+public class NewTest {
+	
+	WebDriver driver;
+	
+//	@Test
+//	public void test() throws MalformedURLException {
+//		
+//		FirefoxOptions firefoxOptions = new FirefoxOptions();
+//		driver = new RemoteWebDriver(new URL("https://127.0.0.1:7136/wd/hub"), firefoxOptions);
+//		driver.get("https://127.0.0.1:7136/todo");
+//		String title = driver.getTitle();
+//		System.out.println(title);
+//		//driver.quit();
+//	}
+	
+	@Test
+	public void test1() {
+		driver = new ChromeDriver();
+		driver.get("https://127.0.0.1:7136/todo");
+		String title = driver.getTitle();
+		System.out.println(title);
+		//driver.quit();
+	}
+	
+}
