@@ -14,24 +14,27 @@ pipeline {
                 bat 'C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln --configuration Release'
             }
         }
-        // stage('Test Stage') {
-        //     steps {
-        //         bat 'dotnet test %WORKSPACE%\\TestProject1\\TestProject1.csproj'
-        //     }
-        // }
-        // stage("Release Stage") {
-        //     steps {
-        //         bat 'dotnet build %WORKSPACE%\\JenkinsWebApplicationDemo.sln /p:PublishProfile=" %WORKSPACE%\\JenkinsWebApplicationDemo\\Properties\\PublishProfiles\\FolderProfile.pubxml" /p:Platform="Any CPU" /p:DeployOnBuild=true /m'
-        //     }
-        // }
-        // stage('Deploy Stage') {
-        //     steps {
-        //         //Deploy application on IIS
-        //         bat 'net stop "w3svc"'
-        //         bat '"C:\\Program Files (x86)\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe" -verb:sync -source:package="%WORKSPACE%\\JenkinsWebApplicationDemo\\bin\\Debug\\net6.0\\JenkinsWebApplicationDemo.zip" -dest:auto -setParam:"IIS Web Application Name"="Demo.Web" -skip:objectName=filePath,absolutePath=".\\\\PackagDemoeTmp\\\\Web.config$" -enableRule:DoNotDelete -allowUntrusted=true'
-        //         bat 'net start "w3svc"'
-        //     }
-        // }
+        stage('Code Review') {
+            steps {
+                echo 'Code Review using Sonarqube'
+              //  bat 'dotnet test %WORKSPACE%\\TestProject1\\TestProject1.csproj'
+            }
+        }
+        stage("Automation Test") {
+            steps {
+                echo 'Automation testing'
+                //bat 'dotnet build %WORKSPACE%\\JenkinsWebApplicationDemo.sln /p:PublishProfile=" %WORKSPACE%\\JenkinsWebApplicationDemo\\Properties\\PublishProfiles\\FolderProfile.pubxml" /p:Platform="Any CPU" /p:DeployOnBuild=true /m'
+            }
+        }
+        stage('Code Deploy') {
+            steps {
+                //Deploy application on IIS
+                echo 'Code Deployment'
+                // bat 'net stop "w3svc"'
+                // bat '"C:\\Program Files (x86)\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe" -verb:sync -source:package="%WORKSPACE%\\JenkinsWebApplicationDemo\\bin\\Debug\\net6.0\\JenkinsWebApplicationDemo.zip" -dest:auto -setParam:"IIS Web Application Name"="Demo.Web" -skip:objectName=filePath,absolutePath=".\\\\PackagDemoeTmp\\\\Web.config$" -enableRule:DoNotDelete -allowUntrusted=true'
+                // bat 'net start "w3svc"'
+            }
+        }
     }
 }
 
