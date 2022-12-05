@@ -11,7 +11,8 @@ pipeline {
         // }
         stage('Build Stage') {
             steps {
-                bat 'C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln --configuration Release'
+                echo 'Build Stage...'
+                //bat 'C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln --configuration Release'
             }
         }
         stage('Code Review') {
