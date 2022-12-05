@@ -4,14 +4,14 @@ pipeline {
         dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
     }
     stages {
-        stage('Checkout Stage') {
-            steps {
-                git credentialsId: '5ba5e0da-116a-47df-8e8c-639f4654358c', url: 'https://github.com/Jaydeep-007/JenkinsWebApplicationDemo.git', branch: 'main'
-            }
-        }
+        // stage('Checkout Stage') {
+        //     steps {
+        //         git credentialsId: '5ba5e0da-116a-47df-8e8c-639f4654358c', url: 'https://github.com/majadhav23/HIRS_Routing.git', branch: 'main'
+        //     }
+        // }
         stage('Build Stage') {
             steps {
-                bat 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\TestPipeline\\JenkinsWebApplicationDemo.sln --configuration Release'
+                bat 'C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln --configuration Release'
             }
         }
         // stage('Test Stage') {
