@@ -12,6 +12,7 @@ pipeline {
         stage('Build Stage') {
             steps {
                 echo 'Build Stage...'
+                bat 'dotnet clean C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln'
                 //bat 'C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln --configuration Release'
             }
         }
