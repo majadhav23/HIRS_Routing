@@ -4,7 +4,7 @@ pipeline {
 
   environment {
     MSBUILD = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Msbuild\\Current\\Bin\\MSBuild.exe"
-    CONFIG = 'Release'
+    CONFIG = 'Debug'
     PLATFORM = 'x86'
   }
   
