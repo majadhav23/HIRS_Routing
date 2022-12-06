@@ -20,10 +20,10 @@ pipeline {
         stage('Code Review') {
             steps {
                 echo 'Code Review using Sonarqube'
-                withEnv(["PATH=C:\\sonar-scanner\\bin"]) {
+                withEnv() {
                   withSonarQubeEnv('Sonar') {
                     // some block
-                    bat 'C:\\sonar-scanner\\bin\\sonar-scanner.bat -v'
+                    bat "C:\\sonar-scanner\\bin\\sonar-scanner.bat -v"
                   }
                 }
             }
