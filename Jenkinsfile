@@ -1,9 +1,7 @@
 pipeline {
     agent any
     environment {
-        PATH = "C:\\WINDOWS\\SYSTEM32"
         dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
-        MSBUILD_SQ_SCANNER_HOME = tool name: 'Scanner_for_MSBuild_4.7', type: 'hudson.plugins.sonar.MsBuildSQRunnerInstallation'
     }
     stages {
         // stage('Checkout Stage') {
