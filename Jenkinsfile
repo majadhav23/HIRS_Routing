@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
+        scannerHome = tool 'Sonar'
     }
     stages {
         // stage('Checkout Stage') {
@@ -24,9 +25,10 @@ pipeline {
                   withSonarQubeEnv('Sonar') {
                     // some block
                     bat "C:\\sonar-scanner\\bin\\sonar-scanner.bat -v"
-                    bat 'dotnet sonarscanner begin /k:"ToDoList" /d:sonar.host.url="http://localhost:9000"  /d:sonar.login="sqp_a064f050df7eb0372f371aa6b4d5c8fbe5e4771e"'
-                    bat "dotnet build"
-                    bat 'dotnet sonarscanner end /d:sonar.login="sqp_a064f050df7eb0372f371aa6b4d5c8fbe5e4771e"'
+                    bat '{scannerHome}/bin/sonar-scanner'
+                    // bat 'dotnet C:\\sonar-scanner\\bin\\sonar-scanner.bat begin /k:"ToDoList" /d:sonar.host.url="http://localhost:9000"  /d:sonar.login="sqp_a064f050df7eb0372f371aa6b4d5c8fbe5e4771e"'
+                    // bat "dotnet build"
+                    // bat 'dotnet sonarscanner end /d:sonar.login="sqp_a064f050df7eb0372f371aa6b4d5c8fbe5e4771e"'
                   }
                 // }
             }
