@@ -24,9 +24,9 @@ pipeline {
                   withSonarQubeEnv('Sonar') {
                     // some block
                     bat "C:\\sonar-scanner\\bin\\sonar-scanner.bat -v"
-                    bat 'dotnet C:\\sonar-scanner\\bin\\sonar-scanner begin /k:"ToDoList" /d:sonar.host.url="http://localhost:9000"  /d:sonar.login="sqp_a064f050df7eb0372f371aa6b4d5c8fbe5e4771e"'
+                    bat 'dotnet sonarscanner begin /k:"ToDoList" /d:sonar.host.url="http://localhost:9000"  /d:sonar.login="sqp_a064f050df7eb0372f371aa6b4d5c8fbe5e4771e"'
                     bat "dotnet build"
-                    bat 'dotnet C:\\sonar-scanner\\bin\\sonar-scanner end /d:sonar.login="sqp_a064f050df7eb0372f371aa6b4d5c8fbe5e4771e"'
+                    bat 'dotnet sonarscanner end /d:sonar.login="sqp_a064f050df7eb0372f371aa6b4d5c8fbe5e4771e"'
                   }
                 // }
             }
