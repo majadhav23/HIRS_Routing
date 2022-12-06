@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
-        PATH = 'C:\\Windows\\System32'
+        //PATH = 'C:\\Windows\\System32'
     }
     stages {
         // stage('Checkout Stage') {
@@ -21,12 +21,12 @@ pipeline {
         stage('Code Review') {
             steps {
                 echo 'Code Review using Sonarqube'
-                withEnv(["PATH=C:\\sonar-scanner\\bin\\"]) {
+                // withEnv(["PATH=C:\\sonar-scanner\\bin\\"]) {
                   withSonarQubeEnv('Sonar') {
                     // some block
                     bat "C:\\sonar-scanner\\bin\\sonar-scanner.bat -v"
                   }
-                }
+                // }
             }
         }
         stage("Automation Test") {
