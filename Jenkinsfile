@@ -20,6 +20,12 @@ pipeline {
         stage('Code Review') {
             steps {
                 echo 'Code Review using Sonarqube'
+                // withSonarQubeEnv('http://localhost:9000') {
+                //   sh 'mvn clean package sonar:sonar'
+                // }
+                bat 'dotnet sonarscanner begin /k:"ToDoList" /d:sonar.host.url="http://localhost:9000"  /d:sonar.login="sqp_a064f050df7eb0372f371aa6b4d5c8fbe5e4771e"'
+                bat 'dotnet build'
+                bat 'dotnet sonarscanner end /d:sonar.login="sqp_a064f050df7eb0372f371aa6b4d5c8fbe5e4771e"'
               //  bat 'dotnet test %WORKSPACE%\\TestProject1\\TestProject1.csproj'
             }
         }
@@ -34,7 +40,7 @@ pipeline {
                 //Deploy application on IIS
                 echo 'Code Deployment'
                 bat "dotnet publish C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln"
-                bat "dotnet run C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\bin\\Debug\\net6.0\\publish\\ToDoList.exe"
+                //bat "dotnet run C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\bin\\Debug\\net6.0\\publish\\ToDoList.exe"
                 // bat 'net stop "w3svc"'
                 // bat '"C:\\Program Files (x86)\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe" -verb:sync -source:package="%WORKSPACE%\\JenkinsWebApplicationDemo\\bin\\Debug\\net6.0\\JenkinsWebApplicationDemo.zip" -dest:auto -setParam:"IIS Web Application Name"="Demo.Web" -skip:objectName=filePath,absolutePath=".\\\\PackagDemoeTmp\\\\Web.config$" -enableRule:DoNotDelete -allowUntrusted=true'
                 // bat 'net start "w3svc"'
