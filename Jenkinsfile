@@ -27,6 +27,7 @@ pipeline {
                     -Dsonar.projectKey=ToDoList \
                     -Dsonar.sources=. \
                     -Dsonar.css.node=. \
+                    -Dsonar.exclusions=**/*.java \
                     -Dsonar.host.url=http://localhost:9000 \
                     -Dsonar.login=sqp_a064f050df7eb0372f371aa6b4d5c8fbe5e4771e"
                         }
