@@ -53,6 +53,7 @@ pipeline {
         }
         stage('Selenium Test') {
             steps {
+                bat 'dir'
                 bat 'mvn clean'
                 bat 'mvn test'
             }
