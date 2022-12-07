@@ -40,12 +40,6 @@ pipeline {
                 // }
             }
         }
-        stage("Automation Test") {
-            steps {
-                echo 'Automation testing'
-                //bat 'dotnet build %WORKSPACE%\\JenkinsWebApplicationDemo.sln /p:PublishProfile=" %WORKSPACE%\\JenkinsWebApplicationDemo\\Properties\\PublishProfiles\\FolderProfile.pubxml" /p:Platform="Any CPU" /p:DeployOnBuild=true /m'
-            }
-        }
         stage('Code Deploy') {
             steps {
                 //Deploy application on IIS
