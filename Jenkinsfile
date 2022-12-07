@@ -56,6 +56,12 @@ pipeline {
                 // bat 'net start "w3svc"'
             }
         }
+        stage('Selenium Test') {
+            steps {
+                bat 'mvn clean'
+                bat 'mvn test'
+            }
+        }
     }
 }
 
