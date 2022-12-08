@@ -22,6 +22,14 @@ namespace ToDoList.Controllers
             return View(todoList);
         }
 
+        public async Task<int> CountOfItems()
+        {
+            IQueryable<TodoList> items = from i in context.ToDoList orderby i.Id select i;
+            List<TodoList> todoList = await items.ToListAsync();
+            int itemCount = todoList.Count;
+            return itemCount;
+        }
+
         // GET /todo/create
         public IActionResult Create() => View();
 

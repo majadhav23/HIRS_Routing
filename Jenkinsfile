@@ -9,54 +9,62 @@ pipeline {
         //         git credentialsId: '5ba5e0da-116a-47df-8e8c-639f4654358c', url: 'https://github.com/majadhav23/HIRS_Routing.git', branch: 'main'
         //     }
         // }
-        stage('Build Stage') {
+         stage('Unit Testing') {
             steps {
-                echo 'Build Stage...'
-                bat 'dotnet clean C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln'
-                bat "dotnet build C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln"
-                //bat 'C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln --configuration Release'
+                echo 'Unit Testing...'
+                bat 'cd C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList'
+                bat 'dotnet test'
             }
         }
-        stage('Code Review') {
-            steps {
-                echo 'Code Review using Sonarqube'
-                script {
-                    def scannerHome = tool 'Sonar';
-                    withSonarQubeEnv("Sonar") {
-                    bat "${tool("Sonar")}/bin/sonar-scanner \
-                    -Dsonar.projectKey=ToDoList \
-                    -Dsonar.sources=. \
-                    -Dsonar.css.node=. \
-                    -Dsonar.exclusions=**/*.java \
-                    -Dsonar.host.url=http://localhost:9000 \
-                    -Dsonar.login=sqp_a064f050df7eb0372f371aa6b4d5c8fbe5e4771e"
-                        }
-                    }
-                // // withEnv(["PATH=C:\\sonar-scanner\\bin\\"]) {
-                //   withSonarQubeEnv('Sonar') {
-                //     // some block
-                //     bat "C:\\sonar-scanner\\bin\\sonar-scanner.bat -v"
-                  // }
-                // }
-            }
-        }
-        stage('Code Deploy') {
-            steps {
-                //Deploy application on IIS
-                echo 'Code Deployment'
-                bat "dotnet publish C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln"
-                //bat "dotnet run C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\bin\\Debug\\net6.0\\publish\\ToDoList.exe"
-                // bat 'net stop "w3svc"'
-                // bat '"C:\\Program Files (x86)\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe" -verb:sync -source:package="%WORKSPACE%\\JenkinsWebApplicationDemo\\bin\\Debug\\net6.0\\JenkinsWebApplicationDemo.zip" -dest:auto -setParam:"IIS Web Application Name"="Demo.Web" -skip:objectName=filePath,absolutePath=".\\\\PackagDemoeTmp\\\\Web.config$" -enableRule:DoNotDelete -allowUntrusted=true'
-                // bat 'net start "w3svc"'
-            }
-        }
-        stage('Selenium Test') {
-            steps {
-                bat 'dir'
-                bat 'mvn clean'
-                bat 'mvn test'
-            }
+
+        // stage('Build Stage') {
+        //     steps {
+        //         echo 'Build Stage...'
+        //         bat 'dotnet clean C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln'
+        //         bat "dotnet build C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln"
+        //         //bat 'C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln --configuration Release'
+        //     }
+        // }
+        // stage('Code Review') {
+        //     steps {
+        //         echo 'Code Review using Sonarqube'
+        //         script {
+        //             def scannerHome = tool 'Sonar';
+        //             withSonarQubeEnv("Sonar") {
+        //             bat "${tool("Sonar")}/bin/sonar-scanner \
+        //             -Dsonar.projectKey=ToDoList \
+        //             -Dsonar.sources=. \
+        //             -Dsonar.css.node=. \
+        //             -Dsonar.exclusions=**/*.java \
+        //             -Dsonar.host.url=http://localhost:9000 \
+        //             -Dsonar.login=sqp_a064f050df7eb0372f371aa6b4d5c8fbe5e4771e"
+        //                 }
+        //             }
+        //         // // withEnv(["PATH=C:\\sonar-scanner\\bin\\"]) {
+        //         //   withSonarQubeEnv('Sonar') {
+        //         //     // some block
+        //         //     bat "C:\\sonar-scanner\\bin\\sonar-scanner.bat -v"
+        //           // }
+        //         // }
+        //     }
+        // }
+        // stage('Code Deploy') {
+        //     steps {
+        //         //Deploy application on IIS
+        //         echo 'Code Deployment'
+        //         bat "dotnet publish C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln"
+        //         //bat "dotnet run C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\bin\\Debug\\net6.0\\publish\\ToDoList.exe"
+        //         // bat 'net stop "w3svc"'
+        //         // bat '"C:\\Program Files (x86)\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe" -verb:sync -source:package="%WORKSPACE%\\JenkinsWebApplicationDemo\\bin\\Debug\\net6.0\\JenkinsWebApplicationDemo.zip" -dest:auto -setParam:"IIS Web Application Name"="Demo.Web" -skip:objectName=filePath,absolutePath=".\\\\PackagDemoeTmp\\\\Web.config$" -enableRule:DoNotDelete -allowUntrusted=true'
+        //         // bat 'net start "w3svc"'
+        //     }
+        // }
+        // stage('Selenium Test') {
+        //     steps {
+        //         bat 'dir'
+        //         bat 'mvn clean'
+        //         bat 'mvn test'
+        //     }
         }
     }
 }
