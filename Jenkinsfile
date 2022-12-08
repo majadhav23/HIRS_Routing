@@ -12,8 +12,8 @@ pipeline {
          stage('Unit Testing') {
             steps {
                 echo 'Unit Testing...'
-                bat 'cd C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList'
-                bat 'dotnet test'
+                // bat 'cd C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList'
+                bat 'dotnet test C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln'
             }
         }
 
