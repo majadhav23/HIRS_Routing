@@ -65,7 +65,7 @@ pipeline {
         //         bat 'mvn clean'
         //         bat 'mvn test'
         //     }
-        }
+        // }
     }
 }
 
