@@ -1,4 +1,5 @@
 C:\Users\003VPO744\Desktop\SimpleProject\HIRS_Routing\ToDoList\ToDoList\bin\Debug\Debug\net6.0\publish\ToDoList.exe
+C:\Users\003VPO744\Desktop\SimpleProject\HIRS_Routing\ToDoList\ToDoList\bin\Debug\Debug\net6.0\publish\web.config
 C:\Users\003VPO744\Desktop\SimpleProject\HIRS_Routing\ToDoList\ToDoList\bin\Debug\Debug\net6.0\publish\appsettings.Development.json
 C:\Users\003VPO744\Desktop\SimpleProject\HIRS_Routing\ToDoList\ToDoList\bin\Debug\Debug\net6.0\publish\appsettings.json
 C:\Users\003VPO744\Desktop\SimpleProject\HIRS_Routing\ToDoList\ToDoList\bin\Debug\Debug\net6.0\publish\ToDoList.dll

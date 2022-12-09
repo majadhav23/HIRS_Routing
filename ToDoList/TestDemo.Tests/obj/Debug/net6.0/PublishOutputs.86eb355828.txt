@@ -1,5 +1,6 @@
 C:\Users\003VPO744\Desktop\SimpleProject\HIRS_Routing\ToDoList\TestDemo.Tests\bin\Debug\net6.0\publish\ToDoList.exe
 C:\Users\003VPO744\Desktop\SimpleProject\HIRS_Routing\ToDoList\TestDemo.Tests\bin\Debug\net6.0\publish\ToDoList.runtimeconfig.json
+C:\Users\003VPO744\Desktop\SimpleProject\HIRS_Routing\ToDoList\TestDemo.Tests\bin\Debug\net6.0\publish\web.config
 C:\Users\003VPO744\Desktop\SimpleProject\HIRS_Routing\ToDoList\TestDemo.Tests\bin\Debug\net6.0\publish\appsettings.Development.json
 C:\Users\003VPO744\Desktop\SimpleProject\HIRS_Routing\ToDoList\TestDemo.Tests\bin\Debug\net6.0\publish\appsettings.json
 C:\Users\003VPO744\Desktop\SimpleProject\HIRS_Routing\ToDoList\TestDemo.Tests\bin\Debug\net6.0\publish\testhost.exe
