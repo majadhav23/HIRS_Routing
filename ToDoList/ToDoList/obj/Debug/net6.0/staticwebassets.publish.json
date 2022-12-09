@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+vd99QmEOz2xHQkg12j6rM+tcA4NB4pg3TLgCEww0Wo=",
+  "Hash": "N7gcVVwZjvvbIXgwT3h8cPw1sd9k07xiz7DfQC/6nDc=",
   "Source": "ToDoList",
   "BasePath": "_content/ToDoList",
   "Mode": "Default",
@@ -17,10 +17,10 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ToDoList.styles.css",
+      "Identity": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\obj\\Debug\\Debug\\net6.0\\scopedcss\\bundle\\ToDoList.styles.css",
       "SourceId": "ToDoList",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\obj\\Debug\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/ToDoList",
       "RelativePath": "ToDoList.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ToDoList.styles.css"
+      "OriginalItemSpec": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\obj\\Debug\\Debug\\net6.0\\scopedcss\\bundle\\ToDoList.styles.css"
     },
     {
-      "Identity": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ToDoList.bundle.scp.css",
+      "Identity": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\obj\\Debug\\Debug\\net6.0\\scopedcss\\projectbundle\\ToDoList.bundle.scp.css",
       "SourceId": "ToDoList",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\obj\\Debug\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/ToDoList",
       "RelativePath": "ToDoList.bundle.scp.css",
       "AssetKind": "All",
@@ -48,7 +48,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ToDoList.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\obj\\Debug\\Debug\\net6.0\\scopedcss\\projectbundle\\ToDoList.bundle.scp.css"
     },
     {
       "Identity": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\wwwroot\\css\\site.css",

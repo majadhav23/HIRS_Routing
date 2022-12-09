@@ -17,9 +17,9 @@ namespace ToDoList.Controllers
         // GET /
         public async Task<ActionResult> Index()
         {
-            IQueryable<TodoList> items = from i in context.ToDoList orderby i.Id select i;
-            List<TodoList> todoList = await items.ToListAsync();
-            return View(todoList);
+            //IQueryable<TodoList> items = from i in context.ToDoList orderby i.Id select i;
+            //List<TodoList> todoList = await items.ToListAsync();
+            return View();
         }
 
         public async Task<int> CountOfItems()
@@ -51,14 +51,15 @@ namespace ToDoList.Controllers
         }
 
         // GET /todo/edit/:id
-        public async Task<ActionResult> Edit(int id)
+        public async Task<ActionResult> Edit()
         {
-            TodoList item = await context.ToDoList.FindAsync(id);
-            if(item == null)
-            {
-                return NotFound();
-            }
-            return View(item);
+            //TodoList item = await context.ToDoList.FindAsync(id);
+            //if(item == null)
+            //{
+            //    return NotFound();
+            //}
+            //var txt = "Buy Groceries";
+            return View();
         }
 
         // POST /todo/edit/:id

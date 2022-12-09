@@ -1,5 +1,5 @@
-﻿@model IEnumerable<ToDoList.Models.TodoList>
-
+﻿@*@model IEnumerable<ToDoList.Models.TodoList>
+*@
 @{
     ViewData["Title"] = "Index";
 }
@@ -11,13 +11,49 @@
     <thead>
         <tr>
             <th>
-                Content
+                Certifications
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        <tr>
+            <td>
+                Azure
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="">Edit</a> |
+                <a asp-action="Delete" asp-route-id="">Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                AWS
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="">Edit</a> |
+                <a asp-action="Delete" asp-route-id="">Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Python
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="">Edit</a> |
+                <a asp-action="Delete" asp-route-id="">Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ABCD-1234
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="">Edit</a> |
+                <a asp-action="Delete" asp-route-id="">Delete</a>
+            </td>
+        </tr>
+@*@foreach (var item in Model) {
         <tr>
             <td>
                 @item.Content
@@ -27,6 +63,6 @@
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
-}
+}*@
     </tbody>
 </table>

@@ -526,3 +526,4 @@ C:\Users\003VPO744\Desktop\SimpleProject\HIRS_Routing\ToDoList\ToDoList\obj\Debu
 C:\Users\003VPO744\Desktop\SimpleProject\HIRS_Routing\ToDoList\ToDoList\obj\Debug\net6.0\ToDoList.pdb
 C:\Users\003VPO744\Desktop\SimpleProject\HIRS_Routing\ToDoList\ToDoList\obj\Debug\net6.0\ToDoList.genruntimeconfig.cache
 C:\Users\003VPO744\Desktop\SimpleProject\HIRS_Routing\ToDoList\ToDoList\obj\Debug\net6.0\ref\ToDoList.dll
+C:\Users\003VPO744\Desktop\SimpleProject\HIRS_Routing\ToDoList\ToDoList\bin\Debug\net6.0\web.config
