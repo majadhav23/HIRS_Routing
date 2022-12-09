@@ -19,7 +19,7 @@ public class SampleTest {
 		capability.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 		capability.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS,true);
         driver = new ChromeDriver(capability);
-        driver.get("https://127.0.0.1:7136/todo/");
+        driver.get("https://127.0.0.1:80/todo/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
     @Test
