@@ -15,14 +15,6 @@ pipeline {
                 bat 'dotnet test C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln'
             }
         }
-
-        stage('Build Stage') {
-            steps {
-                echo 'Build Stage...'
-                bat 'dotnet clean C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln'
-                bat "dotnet build C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln"
-            }
-        }
         stage('Code Review') {
             steps {
                 echo 'Code Review using Sonarqube'
@@ -38,6 +30,13 @@ pipeline {
                     -Dsonar.login=sqp_a064f050df7eb0372f371aa6b4d5c8fbe5e4771e"
                         }
                     }
+            }
+        }
+        stage('Build Stage') {
+            steps {
+                echo 'Build Stage...'
+                bat 'dotnet clean C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln'
+                bat "dotnet build C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln"
             }
         }
         stage('Code Deploy') {
