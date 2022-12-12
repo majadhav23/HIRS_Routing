@@ -52,7 +52,9 @@ pipeline {
             steps {
                 //Deploy application on IIS
                 echo 'Code Deployment'
+                bat 'iisreset /stop'
                 bat "dotnet publish C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln -o C:\\inetpub\\wwwroot\\todo"
+                bat 'iisreset'
                 //bat "dotnet run C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\bin\\Debug\\net6.0\\publish\\ToDoList.exe"
                 // bat 'net stop "w3svc"'
                 // bat '"C:\\Program Files (x86)\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe" -verb:sync -source:package="%WORKSPACE%\\JenkinsWebApplicationDemo\\bin\\Debug\\net6.0\\JenkinsWebApplicationDemo.zip" -dest:auto -setParam:"IIS Web Application Name"="Demo.Web" -skip:objectName=filePath,absolutePath=".\\\\PackagDemoeTmp\\\\Web.config$" -enableRule:DoNotDelete -allowUntrusted=true'
