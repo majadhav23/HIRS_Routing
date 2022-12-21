@@ -10936,7 +10936,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\003VPO744\\.nuget\\packages\\": {}
+    "C:\\Windows\\system32\\config\\systemprofile\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -10944,11 +10944,11 @@
       "projectUniqueName": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\TestDemo.Tests\\TestDemo.Tests.csproj",
       "projectName": "TestDemo.Tests",
       "projectPath": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\TestDemo.Tests\\TestDemo.Tests.csproj",
-      "packagesPath": "C:\\Users\\003VPO744\\.nuget\\packages\\",
+      "packagesPath": "C:\\Windows\\system32\\config\\systemprofile\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\TestDemo.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\003VPO744\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
