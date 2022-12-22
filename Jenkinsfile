@@ -13,7 +13,6 @@ pipeline {
             steps {
                 echo 'Unit Testing...'
                 echo "Current workspace is ${WORKSPACE}"
-                //bat 'dotnet test C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln'
                 bat "dotnet test ${WORKSPACE}\\ToDoList\\ToDoList.sln"
             }
         }
@@ -37,10 +36,7 @@ pipeline {
         stage('Build Stage') {
             steps {
                 echo 'Build Stage...'
-                //bat 'dotnet clean C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln'
                 bat "dotnet clean ${WORKSPACE}\\ToDoList\\ToDoList.sln"
-                
-                //bat "dotnet build C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln"
                 bat "dotnet build ${WORKSPACE}\\ToDoList\\ToDoList.sln"
             }
         }
@@ -49,9 +45,7 @@ pipeline {
                 //Deploy application on IIS
                 echo 'Code Deployment'
                 bat 'iisreset /stop'
-                //bat "dotnet publish C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln -o C:\\inetpub\\wwwroot\\todo"
                 bat "dotnet publish ${WORKSPACE}\\ToDoList\\ToDoList.sln -o C:\\inetpub\\wwwroot\\todo"
-
                 bat 'iisreset'
             }
         }
