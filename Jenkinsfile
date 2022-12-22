@@ -12,8 +12,9 @@ pipeline {
          stage('Unit Testing') {
             steps {
                 echo 'Unit Testing...'
+                echo "Current workspace is ${WORKSPACE}"
                 //bat 'dotnet test C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln'
-                bat 'dotnet test ${WORKSPACE}\\ToDoList\\ToDoList\\ToDoList.sln'
+                bat "dotnet test ${WORKSPACE}\\ToDoList\\ToDoList\\ToDoList.sln"
             }
         }
         stage('Code Review') {
@@ -37,10 +38,10 @@ pipeline {
             steps {
                 echo 'Build Stage...'
                 //bat 'dotnet clean C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln'
-                bat 'dotnet clean ${WORKSPACE}\\ToDoList\\ToDoList\\ToDoList.sln'
+                bat "dotnet clean ${WORKSPACE}\\ToDoList\\ToDoList\\ToDoList.sln"
                 
                 //bat "dotnet build C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln"
-                bat 'dotnet build ${WORKSPACE}\\ToDoList\\ToDoList\\ToDoList.sln'
+                bat "dotnet build ${WORKSPACE}\\ToDoList\\ToDoList\\ToDoList.sln"
             }
         }
         stage('Code Deploy') {
@@ -49,8 +50,8 @@ pipeline {
                 echo 'Code Deployment'
                 bat 'iisreset /stop'
                 //bat "dotnet publish C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln -o C:\\inetpub\\wwwroot\\todo"
-                bat 'dotnet publish ${WORKSPACE}\\ToDoList\\ToDoList\\ToDoList.sln -o C:\\inetpub\\wwwroot\\todo'
-                
+                bat "dotnet publish ${WORKSPACE}\\ToDoList\\ToDoList\\ToDoList.sln -o C:\\inetpub\\wwwroot\\todo"
+
                 bat 'iisreset'
             }
         }
