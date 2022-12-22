@@ -13,6 +13,7 @@ pipeline {
             steps {
                 echo 'Unit Testing...'
                 bat 'dotnet test C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList.sln'
+                //"${WORKSPACE}\\ToDoList\\ToDoList\\ToDoList.sln"
             }
         }
         stage('Code Review') {
@@ -25,7 +26,7 @@ pipeline {
                     -Dsonar.projectKey=ToDoList \
                     -Dsonar.sources=. \
                     -Dsonar.css.node=. \
-                    -Dsonar.exclusions=**/*.java,**/*.js \
+                    -Dsonar.exclusions=**/*.java,**/*.js,target/* \
                     -Dsonar.host.url=http://localhost:9000 \
                     -Dsonar.login=sqp_5d479b72294fa77e442778dea8e7be7f003025df"
                         }
