@@ -10,11 +10,11 @@
         "projectUniqueName": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\TestDemo.Tests\\TestDemo.Tests.csproj",
         "projectName": "TestDemo.Tests",
         "projectPath": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\TestDemo.Tests\\TestDemo.Tests.csproj",
-        "packagesPath": "C:\\Windows\\system32\\config\\systemprofile\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\003VPO744\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\TestDemo.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\003VPO744\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,11 +97,11 @@
         "projectUniqueName": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\ToDoList.csproj",
         "projectName": "ToDoList",
         "projectPath": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\ToDoList.csproj",
-        "packagesPath": "C:\\Windows\\system32\\config\\systemprofile\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\003VPO744\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\003VPO744\\Desktop\\SimpleProject\\HIRS_Routing\\ToDoList\\ToDoList\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\003VPO744\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
