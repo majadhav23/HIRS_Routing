@@ -27,8 +27,7 @@ pipeline {
                     -Dsonar.sources=. \
                     -Dsonar.css.node=. \
                     -Dsonar.exclusions=**/*.java,**/*.js,target/**/* \
-                    -Dsonar.host.url=http://localhost:9000 \
-                    -Dsonar.login=sqp_333679188e79ca628979f55e616a0d87ea32d110"
+                    -Dsonar.host.url=http://localhost:9000"
                         }
                     }
             }
