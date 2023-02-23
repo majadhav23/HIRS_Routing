@@ -19,7 +19,6 @@ pipeline {
         }
         stage('Code Review') {
             steps {
-		echo "Token: ${sonar_token}"
                 echo 'Code Review using Sonarqube'
                 script {
                     def scannerHome = tool 'Sonar';
@@ -29,7 +28,8 @@ pipeline {
                     -Dsonar.sources=. \
                     -Dsonar.css.node=. \
                     -Dsonar.exclusions=**/*.java,**/*.js,target/**/* \
-                    -Dsonar.host.url=http://localhost:9000"
+                    -Dsonar.host.url=http://localhost:9000 \
+                    -Dsonar.login=${sonar_token}"
                         }
                     }
             }
