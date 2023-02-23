@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
+	sonar_token = credentials('SonarQubeToken')
     }
     stages {
         // stage('Checkout Stage') {
@@ -18,6 +19,7 @@ pipeline {
         }
         stage('Code Review') {
             steps {
+		echo "Token: ${sonar_token}"
                 echo 'Code Review using Sonarqube'
                 script {
                     def scannerHome = tool 'Sonar';
